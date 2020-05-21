@@ -1,0 +1,77 @@
+body { font-family: 'Open Sans', Helvetica, Arial, sans-serif; background-color: rgb(190, 196, 196);}
+footer { margin: 2rem 0; }
+
+hr { margin: 2rem 0; }
+h1 { font-size: 2rem; font-weight: 800; 
+    margin-bottom: 1rem; 
+    text-align-last: center; 
+    background-color: #9e9e9e;
+    height:auto;
+    border-radius:4px;
+    padding: 5px 0;}
+
+h2 { 
+    font-weight: 500; 
+    margin-bottom: 1rem; 
+    background-position: center;
+    background-image: linear-gradient(to left, rgb(139, 138, 138), rgb(52, 93, 168));    
+    color:#fff;
+    font-size:15px;
+    text-align:center;
+    border-radius:4px;}
+
+h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 .3rem 0; text-align: center;}
+h4 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 .1.8rem 0; }
+p { font-size: 1rem; margin: .1rem 0 .5rem 0; line-height: 1.3rem; }
+strong { font-weight: 600; }
+code { background-color: #efefef; font-weight: 600; padding: 0 .5rem; }
+
+
+ul { margin-bottom: 1rem; }
+ul li:not(.titulo) { margin-left: 1rem; line-height: 1.2rem; }
+ul.bullet li { list-style-type: disc; }
+ul.botoes li { margin: 1rem 0; }
+ul.pagination-ok li:hover, ul.pagination-ok li a:focus { background-color: #9e9e9e; color: #fff; }
+ul.pagination-ok li a:hover { color: #fff; }
+ul.pagination-ok li.active, ul.pagination-ok li.active:hover { background-color: #f44336; }
+ul.pagination-ok li.active { color: #fff; display: inline-block; font-size: 1.2rem; font-weight: 600; }
+ul.pagination-ok li a span { font-size: 1rem; vertical-align: top; }
+
+a span.externo { position: absolute; top: -9999px; left: -9999px; }
+.btn-principal { margin-right: 2rem; background-color: #F44336 !important; }
+
+.container { width: 90%; margin: 0 auto; }
+.exemplo { margin: 2rem 0; }
+.destaque { background-color: #efefef; padding: .3rem; }
+.disclaimer { margin: 2rem 0; font-size: .8rem; }
+.icon-home{
+    width: 8%;
+    height: 8%;
+    margin: 0;    
+}
+
+figure {
+    position: relative;
+    
+  }
+   
+  figure:before,
+  figure:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    
+  }
+   
+  img {
+    width: 40%;
+    height: 40%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-left: 335px;
+  }

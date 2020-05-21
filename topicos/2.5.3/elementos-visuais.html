@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>1.3.3 - Características Sensoriais | Exemplos </title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" type="text/css" href="..\css\main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exemplos para a diretriz 2.5.3 - Rótulo no nome acessível</h1>
+        <p>Os exemplos abaixo demonstram boas práticas para determinar o significado de elementos independentemente da tecnologia e recurso utilizado.</p>
+        <p>A fim de agilizar o processo de criação, utilizei o framework <a href="http://materializecss.com/" target="_blank" title="Framework Materialize CSS">MATERIALIZECSS <i class="material-icons tiny" aria-hidden="true">open_in_new</i><span class="externo">link externo</span></a> para a construção dos modelos abaixo.</p>
+
+        <h2>Exemplo: Botão - Formato</h2>
+        <p>No exemplo abaixo temos 5 botões vermelhos, um ao lado do outro.<p>
+        
+        <div class="exemplo">
+            <a href="#!" class="btn-floating btn-principal"><i class="material-icons" aria-hidden="true">save</i></a>
+            <a href="#!" class="btn-floating btn-principal"><i class="material-icons" aria-hidden="true">cloud</i></a>
+            <a href="#!" class="btn btn-principal">salvar</a>
+            <a href="#!" class="btn btn-principal" role="button"><i class="material-icons left" aria-hidden="true">cloud</i>salvar</a>
+            <button class="btn btn-principal"><i class="material-icons left" aria-hidden="true">cloud</i>salvar</button>
+        </div>
+        
+        <p><strong>Sobre o primeiro botão:</strong></p>
+        <p>Trata-se de um <strong>botão redondo com o ícone de um disquete</strong>, com a ideia de representar um botão para salvar. Porém vale lembrar que o disquete fez parte de uma época que já se passou e atualmente os mais jovens podem não saber do que se trata este elemento, se for mantido apenas o ícone no botão sem qualquer outro tipo de informação.</p>
+        
+        <p><strong>Sobre o segundo botão:</strong></p>
+        <p>Trata-se de um <strong>botão redondo com o ícone de uma nuvem</strong>, com a ideia de representar um botão para salvar. Algumas iniciativas tendem a substituir o ícone do disquete para o ícone de nuvem para representar o salvamento na "cloud" (observem o ícone do botão SALVAR do codepen no alto da página quando estiver no modo de visualização de código). Porém vale lembrar que nem todos os usuários estão acostumados com essa identificação e podem não saber do que se trata se o botão for mantido apenas com o ícone sem qualquer outro tipo de informação.</p>
+        
+        <p><strong>Sobre o terceiro botão:</strong></p>
+        <p>Trata-se de um <strong>botão apenas com a literal "SALVAR"</strong>. É um bom exemplo, prático e direto para se utilizar. Qualquer usuário saberá identificar claramente para que serve o botão. Porém, vale ressaltar que a "aparência" de botão está definida apenas através de CSS e neste caso um leitor de telas lerá o elemento como um "link".</p>
+        
+        <p><strong>Sobre o quarto botão:</strong></p>
+        Trata-se de um <strong>botão com informação visual e também literal</strong>. É uma boa opção para fazer com que os usuários se acostumem com elementos visuais em seu site, ainda mais se tratando de uma troca de ícone que significa o salvamento de informações (disquete pela nuvem). Além disso, há marcações de <abbr title="Accessible Rich Internet Applications">ARIA</abbr> identificando o elemento corretamente como um "botão" caso se utulize leitores de tela. É a opção mais completa para se utilizar, quando se usa elemento de link com aparência de botão.</p>
+        
+        <p><strong>Sobre o quinto botão:</strong></p>
+        <p>É um botão exatamente como o anterior, porém com a melhor forma de se construir o elemento do ponto de vista técnico. Aqui utilizamos a tag < button > ao invés de um link < a >, além disso, evitamos dessa forma a utilização de controles <abbr title="Accessible Rich Internet Applications">ARIA</abbr> de forma desnecessária.</p>
+        
+        <hr>
+        
+        <h2>Exemplo: Paginação</h2>
+        
+        <h3 class="destaque">Modelo RUIM e POUCO ACESSÍVEL (original do MATERIALIZECSS)</h3>
+        
+        <div class="exemplo">
+            <ul class="pagination">
+                <li><a href="#!"><i class="material-icons" aria-hidden="true">chevron_left</i></a></li>
+                <li><a href="#!">1</a></li>
+                <li class="active"><a href="#!">2</a></li>
+                <li><a href="#!">3</a></li>
+                <li><a href="#!"><i class="material-icons" aria-hidden="true">chevron_right</i></a></li>
+            </ul>
+        </div>
+        
+        <h4>Por que este modelo pode ser considerado ruim e pouco acessível?</h4>
+        <ul class="bullet">
+            <li>As marcações de <strong>"página anterior"</strong> e <strong>"próxima página"</strong> aparecem apenas com a utilização dos sinais de <strong>maior</strong> e <strong>menor</strong> (o que vai contra a diretriz 1.3.3);</li>
+            <li>A marcação visual da página atual está com pouco contraste;</li>
+            <li>Não há mudança visual clara quando utilizamos o mouse para selecionar os elementos;</li>
+            <li>A página atual (2) possui link. Não é necessário manter o link uma vez que é a página que o usuário está navegando atualmente;</li>
+            <li>Não há identificação clara no código indicando qual a página selecionada e quais os elementos para ir para a anterior e próxima.</li>
+        </ul>
+        
+        <h3 class="destaque">Modelo seguindo BOAS PRÁTICAS</h3>
+
+        <div class="exemplo">
+            <ul class="pagination pagination-ok" role="navigation" aria-label="Paginação">
+                <li><a href="#!"><i class="material-icons" aria-hidden="true">chevron_left</i> <span>página anterior</span></a></li>
+                <li><a href="#!" aria-label="ir para a página 1" aria-current="false">1</a></li>
+                <li class="active" aria-current="true"><a href="#!" aria-label="página atual, página 2">2</a></li>
+                <li><a href="#!" aria-label="ir para a página 3" aria-current="false">3</a></li>
+                <li><a href="#!"><span>próxima página</span> <i class="material-icons" aria-hidden="true">chevron_right</i></a></li>
+            </ul>
+        </div>
+        
+        <h4>Por que este modelo pode ser considerado bom e acessível?</h4>
+        <ul class="bullet">
+            <li>As marcações de <strong>"página anterior"</strong> e <strong>"próxima página"</strong> estão bem definidas e não dependem apenas do visual;</li>
+            <li>O contraste demarcando a página atual é forte, auxiliando usuários com baixa visão;</li>
+            <li>Há mudança visual tanto com o uso do mouse (hover), quanto com o uso do teclado (focus);</li>
+            <li>A página atual (2) possui link com verbalização de "página atual" (também poderia não ter link, uma vez que é a página atual);</li>
+            <li>Há marcações <abbr title="Accessible Rich Internet Applications">ARIA</abbr> e identificações que facilitam a leitura do conteúdo por tecnologias assistivas;</li>
+            <li>No exemplo não foi aplicado, mas para casos em que haja muitas páginas, também pode ser aplicado botões de <strong>"primeira página"</strong> e <strong>"última página"</strong>;</li>
+            <li><strong>Importante:</strong> A semântica pode ser melhorada ainda mais, construindo o elemento envolto da tag <code>NAV</code>.</li>
+        </ul>
+
+        <footer>
+            <a href="../../index.html">voltar para índice</a>
+        </footer>
+    </div>
+</body>
+</html>
