@@ -23,7 +23,7 @@
             exit;
         }
         $resposta = file_get_contents(
-            "https://www.google.com/recaptcha/api/siteverify?secret=6LdHU_oUAAAAADvJ5YTMM4almp-_3CQg7fyG9aUt&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
+            "https://www.google.com/recaptcha/api/siteverify?secret=6LeRqfoUAAAAAKGaVUXtOY-axeGPh5ezZc-CerBe&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
             if ($resposta.sucess) {
                 echo "Mensagem enviada!";
             }else{
