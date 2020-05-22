@@ -17,3 +17,8 @@ function validacao() {
     }
 
 }
+
+function recaptchaCallback()
+ {
+    jQuery('#submitBtn').prop('disabled', false);
+ }
