@@ -4,26 +4,34 @@
     <meta charset="utf-8">
     <title>Exemplo de formulário com reCAPTCHA </title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="..\css\main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif;}
+    .content{display: flex; justify-content: center;}
+    .contato{width: 100%; max-width: 350px;}
+    .form{display: flex; flex-direction: column;}
+    .field{padding: 10px; margin-bottom: 15px; border: 1px solid #DDD; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font: 16px;}
+    textarea{height: 150px;}
+  </style>
   </head>
   <body>
     <div class="container">
     <h1>Exemplo de formulário com o reCaptcha</h1>
     
-    <form action="..\topicos\verifica-captcha.php" method="POST">
+    <form class="form" action="./verifica-captcha.php" method="POST">
       <p>Digite seu nome:   <br>
-      <input name="nome" type="text" size="55"><br><br></p>
+      <input class="field" name="nome" placeholder="Nome" ><br><br></p>
       Mensagem:<br>
-      <textarea name="mensagem" id="areamensagem" cols="30" rows="5"></textarea>
+      <textarea class="field" name="mensagem" placeholder="Digite a mensagem aqui" id="areamensagem" cols="30" rows="5"></textarea>
 
       <div class="g-recaptcha" data-sitekey="6LcrqvoUAAAAAEe3vvlCLCK3Qlt_QYOEAx9VGruL"></div>
       <br>
-      <input type="submit" value="Enviar" >
+      <input class="field" type="submit" value="Enviar" >
       
     </form>
   </div>
