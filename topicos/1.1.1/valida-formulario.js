@@ -11,7 +11,7 @@ function validacao() {
         return false;
     }
 
-    if (document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-spinner").value="") {
+    if (document.querySelector("#recaptcha-anchor").value="") {
         alert("Você não preencheu o Captcha de verificação.");
         return false;
     }
