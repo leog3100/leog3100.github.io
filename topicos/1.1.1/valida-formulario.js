@@ -10,4 +10,10 @@ function validacao() {
         document.form.mensagem.focus();
         return false;
     }
+
+    if (document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-spinner").value="") {
+        alert("Você não preencheu o Captcha de verificação.");
+        return false;
+    }
+
 }
