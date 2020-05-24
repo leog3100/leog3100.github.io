@@ -20,5 +20,5 @@ function validacao() {
 
 function recaptchaCallback()
 {
-   document.jQuery('#submitBtn').prop('disabled', false);
+   document.getElementsByClassName('recaptchaCallback') = jQuery('#submitBtn').prop('disabled', false);
 }
