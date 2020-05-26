@@ -9,16 +9,37 @@ function validacao() {
         alert("Por favor, digite alguma mensagem.");
         document.form.mensagem.focus();
         return false;
-    }else (document.getElementById('recaptcha-id').value=="") {
-        alert("Você não preencheu o Captcha de verificação.");
-        return false;
-    }else {
-        recaptchaCallback();
     }
+        var op = document.getElementsByClassName('g-recaptcha').value;
+    if(op == "")
+            {
+                if(!document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=true;              
+            }
+
+            else if(op == "1")
+            {
+                if(document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=false;
+            }
 
 }
 
+        function habilitaBtn () {
+            var op = document.getElementsByClassName('g-recaptcha').value;
+
+            if(op == "")
+            {
+                if(!document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=true;              
+            }
+
+            else if(op == "1")
+            {
+                if(document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=false;
+            }
+        }
+
+
+
 function recaptchaCallback()
 {
-   document.getElementsByClassName('g-recaptcha') = jQuery('#submitBtn').prop('disabled', false);
+   document.getElementsByClassName('recaptchaCallback') = jQuery('#submitBtn').prop('disabled', false);
 }
