@@ -9,9 +9,7 @@ function validacao() {
         alert("Por favor, digite alguma mensagem.");
         document.form.mensagem.focus();
         return false;
-    }
-
-    if (document.getElementsByClassName('recaptchaCallback').value=="") {
+    }else (document.getElementById('recaptcha-id').value=="") {
         alert("Você não preencheu o Captcha de verificação.");
         return false;
     }else {
@@ -22,5 +20,5 @@ function validacao() {
 
 function recaptchaCallback()
 {
-   document.getElementsByClassName('recaptchaCallback') = jQuery('#submitBtn').prop('disabled', false);
+   document.getElementsByClassName('g-recaptcha') = jQuery('#submitBtn').prop('disabled', false);
 }
