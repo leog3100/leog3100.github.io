@@ -15,7 +15,7 @@ function validacao() {
         alert("Você não preencheu o Captcha de verificação.");
         return false;
     }else {
-        document.getElementsByClassName('recaptchaCallback') = jQuery('#submitBtn').prop('disabled', false);
+        recaptchaCallback();
     }
 
 }
