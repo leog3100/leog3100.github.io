@@ -11,9 +11,11 @@ function validacao() {
         return false;
     }
 
-    if (document.querySelector("recaptcha-anchor").value=="0") {
+    if (document.getElementById("recaptcha-id").value=="") {
         alert("Você não preencheu o Captcha de verificação.");
         return false;
+    }else {
+        document.getElementsByClassName('recaptchaCallback') = jQuery('#submitBtn').prop('disabled', true);
     }
 
 }
