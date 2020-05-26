@@ -10,36 +10,17 @@ function validacao() {
         document.form.mensagem.focus();
         return false;
     }
-        var op = document.getElementsByClassName('g-recaptcha').value;
-    if(op == "")
-            {
-                if(!document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=true;              
-            }
 
-            else if(op == "1")
-            {
-                if(document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=false;
-            }
+    if (!document.getElementById('recaptcha-id').value=="") {
+        alert("Você não preencheu o Captcha de verificação.");
+        return false;
+    }else {
+        recaptchaCallback();
+    }
 
 }
 
-        function habilitaBtn () {
-            var op = document.getElementsByClassName('g-recaptcha').value;
-
-            if(op == "")
-            {
-                if(!document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=true;              
-            }
-
-            else if(op == "1")
-            {
-                if(document.getElementById('btn-enviar').disabled) document.getElementById('btn-enviar').disabled=false;
-            }
-        }
-
-
-
 function recaptchaCallback()
 {
-   document.getElementsByClassName('recaptchaCallback') = jQuery('#submitBtn').prop('disabled', false);
+   document.getElementsByName("Submit") = jQuery('#submitBtn').prop('disabled', false);
 }
