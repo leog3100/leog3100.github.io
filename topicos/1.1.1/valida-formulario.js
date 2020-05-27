@@ -11,14 +11,19 @@ function validacao() {
         return false;
     }
 
-    if (document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark").value==="") {
+    /*if (document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark").value==="") {
         alert("Você não preencheu o Captcha de verificação.");
         return false;
     }else {
         document.querySelector("body > div.container > form > input:nth-child(9)").toggleAttribute=('disabled,' true);
-    }
+    }  */
 
 }
+
+function recaptchaCallback()
+ {
+    jQuery('#submitBtn').prop('disabled', false);
+ }
 //document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark")
 //function recaptchaCallback()
 //{
