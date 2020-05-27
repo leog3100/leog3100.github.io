@@ -22,5 +22,10 @@ function validacao() {
 
 function recaptchaCallback()
 {
-   document.getElementsByName("Submit") = jQuery('#submitBtn').prop('disabled', false);
+   document.getElementsByName("Submit") = jQuery('#submitBtn').prop('disabled', newFunction());
+
+    function newFunction() {
+        document.getElementsByName("Submit").jQuery('disabled', true);
+        return false;
+    }
 }
