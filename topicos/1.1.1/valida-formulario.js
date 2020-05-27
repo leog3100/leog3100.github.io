@@ -1,4 +1,4 @@
-function validacao() {
+function validacao(recaptchaCallback) {
     if(document.form.nome.value=="") {
         alert("Por favor, preencha o Nome.");
         document.form.nome.focus();
@@ -22,10 +22,6 @@ function validacao() {
 
 function recaptchaCallback()
 {
-   document.getElementsByName("Submit") = jQuery('#submitBtn').prop('disabled', newFunction());
+   document.getElementsByName("Submit") = jQuery('#submitBtn').prop('disabled', true);
 
-    function newFunction() {
-        document.getElementsByName("Submit").jQuery('disabled', true);
-        return false;
-    }
 }
