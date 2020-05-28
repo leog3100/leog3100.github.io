@@ -23,7 +23,7 @@ function validacao() {
 function recaptchaCallback()
  {
      alert("Função foi chamada!!!");
-    jQuery('#submit').prop('disabled', false);
+    jQuery('#submitBtn').prop('disabled', false);
  }
 //document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark")
 //function recaptchaCallback()
