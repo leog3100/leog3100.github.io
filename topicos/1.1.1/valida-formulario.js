@@ -11,6 +11,12 @@ function validacao() {
         return false;
     }
 
+   if (!recaptchaCallback()) {
+       alert("Por favor, preencha a verificação para continuar.")
+   } 
+   
+   }
+
     /*if (document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark").value==="") {
         alert("Você não preencheu o Captcha de verificação.");
         return false;
@@ -18,12 +24,11 @@ function validacao() {
         document.querySelector("body > div.container > form > input:nth-child(9)").toggleAttribute=('disabled,' true);
     }  */
 
-}
 
 function recaptchaCallback()
  {
      alert("Função foi chamada!!!");
-    $('ssubmit').prop('disabled', false);
+    $('submit').prop('disabled', false);
  }
 //document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark")
 //function recaptchaCallback()
