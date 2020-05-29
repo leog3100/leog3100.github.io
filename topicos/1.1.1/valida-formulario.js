@@ -11,9 +11,11 @@ function validacao() {
         return false;
     }
 
-   if (!recaptchaCallback()) {
+   if ($('Submit').prop('value', 0)) {
        alert("Por favor, preencha a verificação para continuar.")
-   } 
+   }
+   
+
    
    }
 
@@ -29,7 +31,7 @@ function recaptchaCallback()
  {
      alert("Função foi chamada!!!");
      var button = document.querySelector("#submitBtn")
-    $('el').prop('disabled', false);
+    $('button').prop('disabled', false);
  }
 //document.querySelector("#recaptcha-anchor > div.recaptcha-checkbox-checkmark")
 //function recaptchaCallback()
